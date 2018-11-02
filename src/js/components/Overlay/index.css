@@ -1,0 +1,77 @@
+/* FIXED OVERLAY */
+
+.overlay {
+
+  &-header,
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 98;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 6rem;
+  }
+
+  &-footer {
+    width: auto;
+    bottom: 0;
+    top: unset;
+  }
+
+  &-logo {
+    position: absolute;
+    left: calc(50% - 4rem);
+    transform: translateY(-15rem);
+    transition: transform .2s ease-out;
+    z-index: 98;
+
+    & img {
+      width: 8rem;
+    }
+
+    & p {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 2rem;
+      letter-spacing: .5rem;
+    }
+  }
+
+  &-nav {
+
+    & ul {
+      height: 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    & li {
+      width: 1.4rem;
+    }
+
+    &-item {
+      display: block;
+      max-width: 1.4rem;
+      max-height: 1.4rem;
+      min-width: 1.4rem;
+      min-height: 1.4rem;
+      border-radius: 50%;
+      border: solid .2rem black;
+
+      &-active {
+        background-color: black;
+      }
+    }
+  }
+}
+
+.menu-icon {
+  width: 2rem;
+}
+
+/* END FIXED OVERLAY */
